@@ -2,3 +2,6 @@ body{
       font-family: "Epunda Slab", serif;
 
 }
+h2{
+    font-optical-sizing: auto;
+}
