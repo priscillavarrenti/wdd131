@@ -1,15 +1,17 @@
-body{
-      font-family: "Epunda Slab", serif;
-      font-weight: 400;
-}
-h2{
-    font-weight: 300;
-    font-optical-sizing: auto;
-}
-
 :root{
     --main-color: #4A90E2;
     --accent-color: #50E3C2;
     --background-color: #F5F5F5;
     --text-color: #333333;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2{
+    font-family: "Epunda Slab", serif;
 }
