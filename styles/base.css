@@ -9,9 +9,9 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    
+
 }
 
-h1, h2{
+h1, h2, #course-title{
     font-family: "Epunda Slab", serif;
 }
