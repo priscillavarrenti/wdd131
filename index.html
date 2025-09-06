@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+
+    <title>WDD 131 - Dynamic Wed Fundamentals - Priscilla Varrenti</title>
+
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Priscilla Varrenti. Introduction to myself, using basic html structure, css styling and JavaScript funtionality.">
+    <meta name="author" content="Priscilla Varrenti">
+
+    <link rel="stylesheet" href="styles/base.css">
 </head>
+
 <body>
-    <h1>WDD 131 - Priscilla Varrenti</h1>
+    <header>
+        <h1><span id="course-title">WDD 131 - Dynamic Wed Fundamentals</span></h1>
+
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/priscilla-mariel-v-56923528b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">LinkedIn</a></li>
+                <li><a href=" https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p36#p36" target="_blank">My Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Priscilla Varrenti</h1>
+
+        <section  class="card">
+            <h2>About Me</h2>
+            <img src="" alt="personal photo">
+            <p>text about me..............</p>
+        </section>
+
+        <section class="card">
+            <h2>Buenos Aires, Argentina</h2>
+            <img src="" alt="photo of Buenos Aires, Argentina">
+            <p>text about Buenos Aires, Argentina </p>        
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>Priscilla Varrenti, Argentina</p>
+        <p id="lastModified"></p>
+
+        <script src="scripts/getdates.js"></script>
+    </footer>
 </body>
 </html>
