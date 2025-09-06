@@ -6,3 +6,10 @@ h2{
     font-weight: 300;
     font-optical-sizing: auto;
 }
+
+:root{
+    --main-color: #4A90E2;
+    --accent-color: #50E3C2;
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+}
