@@ -3,15 +3,89 @@
     --accent-color: #EAB308;
     --background-color: #f9f9f9;
     --text-color: #1f2937;
+    --card-background: #ffffff;
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
 
 body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:"Epunda Slab", serif;
     background-color: var(--background-color);
     color: var(--text-color);
-
+    line-height: 1.6;
 }
 
-h1, h2, #course-title{
-    font-family: "Epunda Slab", serif;
+header{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#course-title{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: var(--background-color) 0.3s ease;
+}
+
+nav a:hover{
+    background-color: var(--accent-color);
+    color: black;
+}
+
+main{
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+main h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card{
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+footer{
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
 }
