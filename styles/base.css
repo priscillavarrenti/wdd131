@@ -1,7 +1,8 @@
 body{
       font-family: "Epunda Slab", serif;
-
+      font-weight: 400;
 }
 h2{
+    font-weight: 300;
     font-optical-sizing: auto;
 }
