@@ -32,7 +32,7 @@ header h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .course-title{
@@ -40,9 +40,9 @@ header h1{
 }
 
 .student-name{
-    font-family: "dancing script", cursive;
+    font-family: "Epunda Slab", serif;
     color: var(--accent-color);
-    font-size: italic;
+    font-size: 0.8rem;
 }
 
 #course-title{
