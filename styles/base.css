@@ -56,12 +56,24 @@ nav a:hover{
 }
 
 main{
-    max-width: 900px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "about resources" "buenos resources";
     gap: 2rem;
+}
+.about{
+    grid-area: about;
+}
+
+.buenos-aires{
+    grid-area: buenos;
+}
+
+.resources{
+    grid-area: resources;
 }
 
 main h1{
