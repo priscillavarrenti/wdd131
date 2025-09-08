@@ -26,6 +26,25 @@ header{
     padding: 1.5rem;
 }
 
+header h1{
+    font-size: smaller;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-title{
+    font-weight: bold;
+}
+
+.student-name{
+    font-family: "dancing script", cursive;
+    color: var(--accent-color);
+    font-size: italic;
+}
+
 #course-title{
     display: block;
     font-size: 1.4rem;
@@ -60,8 +79,10 @@ main{
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-areas: "about resources" "buenos resources";
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+      "about resources" 
+      "buenos resources";
     gap: 2rem;
 }
 .about{
