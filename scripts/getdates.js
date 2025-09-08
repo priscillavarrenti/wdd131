@@ -1,4 +1,4 @@
-const yearspan = document.getElementById("currentyear");
+const yearSpan = document.getElementById("currentyear");
 const currentyear= new Date().getFullYear();
 yearSpan.textContent = currentyear;
 
