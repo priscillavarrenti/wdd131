@@ -3,80 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>temples</title>
+    <title>Temples</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
 </head>
+
 <body>
     <header>
-        <p>Temple Album</p>
+        <h1> Temple Album </h1>
+        <button type = "button" id="menu"> ☰ </button>
         <nav>
-            <a href="temples.html">Home</a>
+            <a href="#">Home</a>
             <a href="#">Old</a>
             <a href="#">New</a>
             <a href="#">Large</a>
             <a href="#">Small</a>
         </nav>
-
+        
     </header>
 
     <main>
-        <h1>ILDS Temples</h1>
+        <h1> Temples of Sourth America </h1>
 
-        <figure>
-            <img src="../images/BuenosAIS.jpeg" alt="Buenos Aires Temple">
-            <figcaption> Buenos Aires Temple </figcaption>
-        </figure>
+        <div class = "temples-grid">
+            
+            <figure>
+                <img src="../images/BuenosAIS.jpeg" alt="Buenos Aires Temple">
+                <figcaption> Buenos Aires Temple </figcaption>
+            </figure>
+            
+            <figure>
+                <img src="../images/chilee.jpeg" alt="Santiago Chile Temple">
+                <figcaption> Santiago Chile Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/chilee.jpeg" alt="Santiago Chile Temple">
-            <figcaption> Santiago Chile Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/brazil.jpeg" alt="São Paulo Brazil Temple">
+                <figcaption> São Paulo Brazil Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/brazil.jpeg" alt="São Paulo Brazil Temple">
-            <figcaption> São Paulo Brazil Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/peru.jpeg" alt="Lima Peru Temple">
+                <figcaption> Lima Peru Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/peru.jpeg" alt="Lima Peru Temple">
-            <figcaption> Lima Peru Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/venezuela.jpeg" alt="Caracas Venezuela Temple">
+                <figcaption> Caracas Venezuela Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/venezuela.jpeg" alt="Caracas Venezuela Temple">
-            <figcaption> Caracas Venezuela Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/ecuador.jpeg" alt="Quito Ecuador Temple">
+                <figcaption> Quito Ecuador Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/ecuador.jpeg" alt="Quito Ecuador Temple">
-            <figcaption> Quito Ecuador Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/bolivia.jpeg" alt="La Paz Bolivia Temple">
+                <figcaption> La Paz Bolivia Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/bolivia.jpeg" alt="La Paz Bolivia Temple">
-            <figcaption> La Paz Bolivia Temple </figcaption>
-        </figure>
+            <figure>
+                <img src="../images/paraguay.jpeg" alt="Asunción Paraguay Temple">
+                <figcaption> Asunción Paraguay Temple </figcaption>
+            </figure>
 
-        <figure>
-            <img src="../images/paraguay.jpeg" alt="Asunción Paraguay Temple">
-            <figcaption> Asunción Paraguay Temple </figcaption>
-        </figure>
-
-        <figure>
-            <img src="../images/uruguay.jpeg" alt="Montevideo Uruguay Temple">
-            <figcaption> Montevideo Uruguay Temple </figcaption>
-        </figure>
-
+            <figure>
+                <img src="../images/uruguay.jpeg" alt="Montevideo Uruguay Temple">
+                <figcaption> Montevideo Uruguay Temple </figcaption>
+            </figure>
+        </div>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span>🐚Priscilla Varrenti🐚 Argentina</p>
+        <p>&copy;<span id="currentyear"></span> 🐚Priscilla Varrenti🐚 Argentina</p>
 
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-    <script src="scripts/temples.js" defer></script>
+    
+    <script src="../scripts/getdates.js"></script>
 </body>
 
 </html>
