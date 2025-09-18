@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px){
+    nav.navegation {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .temples-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    }
+
+
+}

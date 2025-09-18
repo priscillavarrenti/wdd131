@@ -46,3 +46,11 @@ nav.navigator a:hover {
 figure {
     text-align: center;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
