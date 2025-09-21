@@ -24,7 +24,7 @@ main h1{
 nav{
     display: none;
     flex-direction: column;
-    background-color: #004080;
+    
 }
 
 
@@ -32,7 +32,7 @@ nav a {
     color: white;
     padding: 0.75rem;
     text-decoration: none;
-    border-top: 1px solid #0059b3;
+    border-top: 1px  #0059b3;
 }
 
 nav a:hover {
@@ -44,12 +44,13 @@ nav.open { display: flex;}
 #menu {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: white;
     position:absolute;
     top: 1rem;
     right: 1rem;
-    margin: 0 auto;
+    cursor: pointer;
+    
 }
 
 .temples-grid {
