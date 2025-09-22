@@ -1,0 +1,41 @@
+:root{
+    --primary-color: #ff6347;
+    --second-color: #32cd32;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+}
+
+@media screen and (min-width: 600px){
+    body {
+        font-family: Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header { 
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .weather {
+        padding: 40px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .weather h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .weather-icon {
+        font-size: 3rem;
+        margin-left: 10px;
+    }
+}
