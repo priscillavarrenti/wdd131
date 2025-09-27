@@ -61,4 +61,5 @@ footer {
 
 .weather img {
     width: 5rem;
+    display: block;
 }
