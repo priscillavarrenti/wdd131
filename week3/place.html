@@ -22,22 +22,32 @@
 
     <section class="hero">
         <picture>
-            <source srcset="images/hero-large.webp" media="(min-width: 1023px)">
-            <img src="images/hero-small.webp" alt="Animal in Argentina">
+            <source srcset="../images/hero-large.webp" media="(min-width: 1024px)">
+            <img src="../images/hero-small.webp" alt="Animal in Argentina">
         </picture>
-    </section>
+        
+        <div class="info">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 2,780,400 sq km</p>
+            <p><strong>Population:</strong> 45,810,000</p>
+            <p><strong>Capital:</strong> Buenos Aires</p>
+            <p><strong>Languages:</strong> Spanish</p>
+            <p><strong>Currency:</strong> Argentina Peso</p>
+            <p><strong>Time Zone:</strong> UTC-3</p>
+            <P><strong>Calling Code:</strong> +54</P>
+            <p><strong>Internet TLD:</strong> .ar</p>
+        </div>
 
-    <section class="info">
-        <h2>Data</h2>
-        <p>kfnvaemrf-evmqlkmvrflm</p>
-    </section>
+        <div class="weather">
+            <h2>Weather</h2>
+            <img src="../images/Weather sticker.svg" alt="sticker">
+            <p id="temperature"><strong>Temperature:</strong> 8° C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p id="windspeed"><strong>Wind:</strong> 15 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </div>
 
-    <section class="weather">
-        <h2>Weather <span class="weather-icon">⛅</span></h2>
-        <p id="weather">temperature: 24°C</p>
-        <p>Wind: 10 km/h</p>
-        <p>Windchill: <span id="windchill">calculating.....</span></p>
-        <p></p>
+        
     </section>
 
     <footer>
