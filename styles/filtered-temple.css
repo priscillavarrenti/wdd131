@@ -17,8 +17,9 @@ header h1 {
     margin: 1px;
 }
 
-main h1{
+main h1, h2{
     text-align: center;
+    font-size: 2rem;
 }
 
 nav{
@@ -60,7 +61,7 @@ nav.open { display: flex;}
     padding: 1rem;
 }
 
-.temples-card {
+.temple-card {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 1rem;
@@ -68,7 +69,7 @@ nav.open { display: flex;}
     text-align: center;
 }
 
-.temples-card img {
+.temple-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;

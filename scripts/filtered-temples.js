@@ -55,7 +55,7 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
   },
   {
     templeName: "Lima Perú",
@@ -63,7 +63,7 @@ const temples = [
     dedicated: "1986, January, 10",
     area: 9600,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
   },
   {
     templeName: "Mexico City Mexico",
@@ -71,23 +71,24 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
+//   my additions
   {
     templeName:"Buenos Aires Argentina",
     location:"Buenos Aires, Argentina",
-    dedicated: "1986, January, 17-19",
-    area: 30659,
+    dedicated: "1986, January, 19",
+    area: 306599,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087-main.jpg"
-  }
+    "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087-main.jpg",
+  },
   {
     templeName:"Montevideo Uruguay",
     location:"Montevideo, Uruguay",
     dedicated:"2001, March, 18",
     area: 10700,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/montevideo-uruguay-temple/montevideo-uruguay-temple-18474-main.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/montevideo-uruguay-temple/montevideo-uruguay-temple-18474-main.jpg",
   },
   {
     templeName:"Brasília Brazil",
@@ -95,18 +96,21 @@ const temples = [
     dedicated:"2023, September, 17",
     area: 25000,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39184-main.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39184-main.jpg",
   }
 ];
 
-const container = document.querySelector(".temples-grid");
+const container = document.getElementById("temples-container");
+const PageTitle = document.getElementById("page-title");
 
 function renderTemples(filteredTemples) {
     container.innerHTML = "";
 
-    filteredTemples.forEach( t => {
+    filteredTemples.forEach((t) => {
         const card = document.createElement("div");
         card.classList.add("temple-card");
+
+        const dedicatedDate = new Date(t.dedicated);
 
         card.innerHTML = `
         <h3>${t.templeName}</h3>
@@ -123,25 +127,33 @@ renderTemples(temples);
 document.querySelectorAll("#nav-menu a").forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
-        const filter = e.target.textContent;
-
+        const filter = e.target.dataset.filter;
         let filtered = [];
 
         switch (filter) {
-            case "Home":
+            case "all":
+                PageTitle.textContent = "Home";
                 filtered = temples;
                 break;
+
             case "Old":
-                filtered = temples.filter(t => new Date (t.dedicated).getFullYear() <1900);
+                PageTitle.textContent = "Old Temples";
+                filtered = temples.filter((t) => new Date (t.dedicated).getFullYear() <1900);
                 break;
+
             case "New":
+                PageTitle.textContent = "New Temples";
                 filtered = temples.filter(t => new Date (t.dedicated).getFullYear() >2000);
                 break;
             case "Large":
+                PageTitle.textContent= "Large Temples";
                 filtered = temples.filter(t => t.area > 90000);
                 break;
+
             case "Small":
+                PageTitle.textContent = "Small Temples";
                 filtered = temples.filter(t => t.area <10000);
+                break;
         }
 
         renderTemples(filtered)

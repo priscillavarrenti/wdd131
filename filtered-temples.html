@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles/filtered-temple-large">
+    
     <link rel="stylesheet" href="styles/filtered-temple.css">
+    <link rel="stylesheet" href="styles/filtered-temple-large.css">
 
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
@@ -21,6 +22,7 @@
     <header>
         <div class="header-container">
             <h1> Temple Album </h1>
+            <button id="menu" aria-label="Toggle menu">☰</button>
             <nav id="nav-menu">
                 <a href="#" data-filter="all">Home</a>
                 <a href="#" data-filter="Old">Old</a>
@@ -29,13 +31,13 @@
                 <a href="#" data-filter="Small">Small</a>
             </nav>
         </div>
-       <button id="menu">☰</button> 
+        
     </header>
 
     <main>
-        <h2> Home </h2>
+        <h2 id="page-title">Home</h2>
 
-        <div class = "temples-grid">
+        <div class = "temples-grid" id="temples-container">
             
         </div>
     </main>
