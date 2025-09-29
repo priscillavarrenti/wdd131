@@ -80,7 +80,7 @@ const temples = [
     dedicated: "1986, January, 19",
     area: 306599,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087-main.jpg",
+    "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4088-thumb.jpg"
   },
   {
     templeName:"Montevideo Uruguay",
