@@ -96,8 +96,8 @@ const temples = [
     dedicated:"2023, September, 17",
     area: 25000,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39184-main.jpg",
-  }
+    "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39204-thumb.jpg"
+   }
 ];
 
 const container = document.getElementById("temples-container");
