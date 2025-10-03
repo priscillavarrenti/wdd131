@@ -1,0 +1,30 @@
+:root {
+    --primary-color: ;
+    --second-color: #e180a5;
+    --bg-color: #fceef3;
+    --light_bg_color:#fcf9f5;
+    --text-color: #c2c2c2;
+    --spacing: 1rem;
+}
+
+body {
+    font-family: "Dosis", sans-serif; 
+    background-color: var(--bg-color);
+    color: var(--second-color);
+    margin: 1rem;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    text-align: center;
+    padding: var(--spacing);
+    border-radius: 0.75rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Gravitas One', cursive;
+}
