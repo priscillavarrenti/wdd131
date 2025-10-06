@@ -1,11 +1,36 @@
 :root {
-    --primary-color: ;
-    --second-color: #e180a5;
-    --bg-color: #fceef3;
-    --light_bg_color:#fcf9f5;
-    --text-color: #c2c2c2;
+    --primary-color: #b43434;
+    --second-color: #E180A5;
+    --bg-color: #FFD6F7;
+    --light_bg_color:#f6a4ad;
+    --text-color: #73001F;
     --spacing: 1rem;
 }
+
+#menu {
+    font-size: 2rem;
+    background-color: var(--bg-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+nav#nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    background-color: var(--light_bg_color);
+    padding: var(--spacing);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+
+}
+nav#nav-menu.open { display: flex; }
+
 
 body {
     font-family: "Dosis", sans-serif; 
@@ -16,15 +41,62 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--second-color);
+    background-color: var(--second-color);
     text-align: center;
     padding: var(--spacing);
-    border-radius: 0.75rem;
+    border-radius: 0.7rem;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-family: 'Gravitas One', cursive;
+    font-size: 2.2rem;
+    font-family: 'Gravitas One', serif;
+    color: var(--text-color);
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+P, div, li {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#plan-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing);
+}
+
+.plan-card {
+    background-color: var(--light_bg_color);
+    padding: var(--spacing);
+    border-radius: 0.5rem;
+    margin: var(--spacing);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.plan-card img {
+    max-width: 90%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+    padding: var(--spacing);
+    border-top: 1px solid var(--text-color);
+    background-color: var(--second-color);
 }

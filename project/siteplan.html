@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site map - Olga's Sweet Secrets Club </title>
-    <meta name="description" content="Join Olga's Sweet Secrets Club for exclusive recipes, baking tips, and stories of each recipie.">
+    <title>Site map - Olga's Sweet Secrets </title>
+    <meta name="description" content="Join Olga's Sweet Secrets for exclusive recipes, baking tips, and stories of each recipe.">
     <meta name="author" content="Priscilla M. Varrenti">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="siteplan.css">
     <link rel="stylesheet" href="siteplan_large.css" media="screen and (min-width: 801px)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Gravitas+One&display=swap" rel="stylesheet">
 
-    
-
-
+    <script src="siteplan.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Olga's Sweet Secrets Club</h1>
+       <div class="header-container">
+        <h1>Olga's Sweet Secrets </h1>
+         <button id="menu" aria-label="Toggle menu">☰</button>
+            <nav id="nav-menu">
+                <a href="#" data-filter="all">Home</a>
+                <a href="#" data-filter="beginners">Beginners</a>
+                <a href="#" data-filter="advanced">Advanced</a>
+                <a href="#" data-filter="blog">Blog</a>
+                <a href="#" data-filter="specials">Specials</a>
+            </nav>
+       </div>
     </header>
 
-    <section>
-        <h2>sites name</h2>
-        <p><strong>Olga's Sweet Secrets Club </strong>
-        A place where cooking blends with memories 
-        of my grandmother Olga</p>
-    </section>
+    <main>
+        <h2 id="page-title">Home</h2>
+        <div id="plan-container"></div>
+    </main>
 
-    <section>
-        <h2>site purpose</h2>
-        <p>The site aims to share recipies for beginners and advanced cooks,
-        accompanied by family stories and tips that inspire tradition and 
-        creativity in the kitchen.</p>
-    </section>
+    <footer>
+         <p>&copy;<span id="currentyear"></span> | Site Plan - Project05 | Priscilla Varrenti | Argentina</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
 
-    
 </body>
 </html>
