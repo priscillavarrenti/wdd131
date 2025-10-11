@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W05 Assignment: Product Review Form</title>
+    <meta name="author" content="Priscilla Varrenti">
+    <meta name="description" content="product review form for wdd 131 Assignment week 6">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form_large.css">
+
+    <script src="scripts/form.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Confirmation Page</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <!-- Product name -->
+            <label for="productName" class="section-title">Product Name*</label>
+            <select name="productName" id="productName" required>
+                <option value="" disabled selected> Select a Product...</option>
+            </select>
+                
+                
+            <!--Overall Ratting-->
+            <fieldset>
+                <legend class="section-title">Overall Ratting</legend>
+                    <div class="star-rating">
+                        <input type="radio" name="rating" id="star-a" value="5"/>
+                        <label for="star-a"></label>
+
+                        <input type="radio" name="rating" id="star-b" value="4"/>
+                        <label for="star-b"></label>
+            
+                        <input type="radio" name="rating" id="star-c" value="3"/>
+                        <label for="star-c"></label>
+            
+                        <input type="radio" name="rating" id="star-d" value="2"/>
+                        <label for="star-d"></label>
+            
+                        <input type="radio" name="rating" id="star-e" value="1"/>
+                        <label for="star-e"></label>
+                    </div>
+            </fieldset>
+            
+            <!--Date of Installation-->
+            <label for="installDate" class="section-title">Date of Installation *</label>
+                <input type="date" name="installDate" id="installDate" required>
+            
+
+            <!--Useful Features-->
+            <fieldset>
+                <legend class="section-title">Useful Features (check all that apply):</legend>
+                <label><input type="checkbox" name="features" id="feature1" value="Easy to Use"> Easy to Use</label><br>
+                <label><input type="checkbox" name="features" id="feature2" value="Durable">Durable</label><br>
+                <label><input type="checkbox" name="features" id="feature3" value="High Performance">High Performance</label><br>
+                <label><input type="checkbox" name="features" id="feature4" value="Affordable">Affordable</label><br>
+            </fieldset> 
+
+            <!--Written Review-->
+            <label for="review" class="section-title">Written Review (optional)</label>
+            <textarea name="review" id="review" rows="5" cols="50" placeholder="Write your review here..."></textarea>
+
+            <!--User Name-->
+            <label for="username" class="section-title">Your Name (optional)</label>
+            <input type="text" name="username" id="username" placeholder="Optional">
+            
+
+            <!--Submission Button-->
+            <input type="submit" value="Post Review">
+
+        </form> 
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🐚Priscilla Varrenti🐚 Argentina</p>
+        
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+    main {
+        padding: 3rem;
+        font-size: 1.1rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        max-width: 500px;
+        font-size: 1rem;
+    }
+    
+    .star-rating {
+        width: 200px;
+    }
+
+    input[type="submit"] {
+        font-size: 1.3rem;
+        padding: 1rem 2.5rem;
+    }
+}
