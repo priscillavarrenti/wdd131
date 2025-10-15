@@ -8,7 +8,7 @@
     <meta name="author" content="Priscilla M. Varrenti">
 
     <link rel="stylesheet" href="styles/siteOlga.css">
-    <link rel="stylesheet" href="styles/siteOlga_large.css" media="screen and (min-width: 801px)">
+    <link rel="stylesheet" href="styles/siteOlga_large.css" media="screen and (min-width: 785px)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
                 <a href="#" data-filter="beginners">Beginners</a>
                 <a href="#" data-filter="advanced">Advanced</a>
                 <a href="#" data-filter="blog">Blog</a>
-                <a href="#" data-filter="specials">Specials</a>
+                <a href="#" data-filter="contact">Contact</a>
             </nav>
        </div>
     </header>
@@ -35,8 +35,8 @@
         <h2 id="page-title">Home</h2>
         <section id="hero" class="hero">
             <picture>
-                <source srcset="images/cakes.jpg" media="(max-width: 600px)">
-                <source srcset="images/chocoCake.jpg" media="(min-width: 601px)">
+                <source srcset="images/CAKE.jpg" media="(max-width: 784px)">
+                <source srcset="images/chocoCake.jpg" media="(min-width: 785px)">
                 <img src="images/chocoCake.jpg" alt="Delicious chocolate cake">
             </picture>
 
@@ -45,11 +45,24 @@
                 <p>Discover the warmth and taste of traditional baking, inspired my Grandma Olga's hidden recipes.</p>
             </div>
         </section>
+
+        
+        <section id="contact-form" style="display: none;">
+            <form id="contact-form-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit"> Subscribe </button>
+            </form>
+        </section>
         
     </main>
 
     <footer>
-         <p>&copy;<span id="currentyear"></span> | Site Plan - Project05 | Priscilla Varrenti | Argentina</p>
+         <p>&copy;<span id="currentyear"></span> | Site Plan - Project05 | Priscilla M. Varrenti | Argentina</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 

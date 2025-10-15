@@ -16,7 +16,7 @@ document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
 // ===========================
-// Site Content (Recetas, Blog, etc.)
+// Site Content (Recetas, Blog, Contacto)
 // ===========================
 const plan = [
   {
@@ -24,12 +24,20 @@ const plan = [
     description: "This site is a tribute to my grandmother and her delicious recipes.",
     category: "home"
   },
+  // Beginners
   {
-    name: "Easy Vanilla Cake",
-    description: "A beginner-friendly recipe that’s soft, fluffy, and delicious.",
+    name: "Popular Recipe: Choco Cake",
+    description: "This classic chocolate cake was everyone's favorite at my family gatherings. Soft, moist, and unforgettable.",
+    category: "beginners",
+    imageUrl: "images/chocolateCake.jpg"
+  },
+  {
+    name: "Popular Recipe: Vanilla Cake",
+    description: "This classic vanilla cake is light, fluffy, and easy to make.",
     category: "beginners",
     imageUrl: "images/vanilla-cake.jpg"
   },
+  // Advanced
   {
     name: "Chocolate Lava Cake",
     description: "Advanced dessert with molten center. Not for the faint of heart!",
@@ -37,27 +45,40 @@ const plan = [
     imageUrl: "images/lava-cake.jpg"
   },
   {
+    name: "Macarons",
+    description: "Master the art of French macarons with this detailed guide.",
+    category: "advanced",
+    imageUrl: "images/macarons.jpg"
+  },
+  // Blog
+  {
     name: "Why Olga never wrote anything down",
     description: "A blog post about how recipes were passed down by memory.",
     category: "blog"
   },
+  // Contact
   {
-    name: "Pumpkin Pie – Fall Special",
-    description: "Limited-time fall special recipe. Only until November!",
-    category: "specials",
-    imageUrl: "images/pumpkin-pie.jpg"
+    name: "Contact Us",
+    description: "Have questions or want to share a family recipe? Fill out the form below!",
+    category: "contact"
   }
 ];
 
 // ===========================
-// Render Cards
+// DOM References
 // ===========================
 const container = document.getElementById("plan-container");
 const pageTitle = document.getElementById("page-title");
 const hero = document.getElementById("hero");
+const contactFormSection = document.getElementById("contact-form");
 
+// ===========================
+// Render Plan Cards
+// ===========================
 function renderPlan(dataArray) {
   container.innerHTML = "";
+  contactFormSection.style.display = "none"; // Hide form by default
+
   dataArray.forEach((item) => {
     const card = document.createElement("div");
     card.classList.add("plan-card");
@@ -73,13 +94,17 @@ function renderPlan(dataArray) {
 }
 
 // ===========================
-// Navigation Filter Buttons
+// Navigation Filtering
 // ===========================
 document.querySelectorAll("#nav-menu a").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const filter = e.target.dataset.filter;
     let filtered = [];
+
+    // Always hide hero and contact form by default
+    hero.style.display = "none";
+    contactFormSection.style.display = "none";
 
     switch (filter) {
       case "all":
@@ -90,23 +115,20 @@ document.querySelectorAll("#nav-menu a").forEach((link) => {
       case "beginners":
         pageTitle.textContent = "Beginners";
         filtered = plan.filter(item => item.category === "beginners");
-        hero.style.display = "none";
         break;
       case "advanced":
         pageTitle.textContent = "Advanced";
         filtered = plan.filter(item => item.category === "advanced");
-        hero.style.display = "none";
         break;
       case "blog":
         pageTitle.textContent = "Blog";
         filtered = plan.filter(item => item.category === "blog");
-        hero.style.display = "none";
         break;
-      case "specials":
-        pageTitle.textContent = "Specials";
-        filtered = plan.filter(item => item.category === "specials");
-        hero.style.display = "none";
-        break;
+      case "contact":
+        pageTitle.textContent = "Contact Us";
+        container.innerHTML = ""; // Clear cards
+        contactFormSection.style.display = "block"; // Show form
+        return; // Don't call renderPlan
       default:
         pageTitle.textContent = "Home";
         filtered = plan.filter(item => item.category === "home");
@@ -119,7 +141,37 @@ document.querySelectorAll("#nav-menu a").forEach((link) => {
 });
 
 // ===========================
-// Initial Load (Home Page)
+// Initial Load
 // ===========================
 renderPlan(plan.filter(item => item.category === "home"));
 hero.style.display = "block";
+
+// ===========================
+// Contact Form Submission
+// ===========================
+document.addEventListener("submit", (e) => {
+  if (e.target.id === "contact-form-form") {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    const contactData = {
+      name,
+      email,
+      message,
+      timestamp: new Date().toISOString()
+    };
+
+    localStorage.setItem("contactForm", JSON.stringify(contactData));
+    alert("Message saved! Thank you for contacting us.");
+    e.target.reset();
+  }
+});
+
