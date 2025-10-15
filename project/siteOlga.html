@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olga's Sweet Secrets </title>
+    <meta name="description" content="Join Olga's Sweet Secrets for exclusive recipes, baking tips, and stories of each recipe.">
+    <meta name="author" content="Priscilla M. Varrenti">
+
+    <link rel="stylesheet" href="styles/siteOlga.css">
+    <link rel="stylesheet" href="styles/siteOlga_large.css" media="screen and (min-width: 801px)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Gravitas+One&display=swap" rel="stylesheet">
+
+    <script src="Scripts/siteOlga.js" defer></script>
+</head>
+<body>
+    <header>
+       <div class="header-container">
+        <h1>Olga's Sweet Secrets </h1>
+         <button id="menu" aria-label="Toggle menu">☰</button>
+            <nav id="nav-menu">
+                <a href="#" data-filter="all">Home</a>
+                <a href="#" data-filter="beginners">Beginners</a>
+                <a href="#" data-filter="advanced">Advanced</a>
+                <a href="#" data-filter="blog">Blog</a>
+                <a href="#" data-filter="specials">Specials</a>
+            </nav>
+       </div>
+    </header>
+
+    <main>
+        <h2 id="page-title">Home</h2>
+        <section id="hero" class="hero">
+            <picture>
+                <source srcset="images/cakes.jpg" media="(max-width: 600px)">
+                <source srcset="images/chocoCake.jpg" media="(min-width: 601px)">
+                <img src="images/chocoCake.jpg" alt="Delicious chocolate cake">
+            </picture>
+
+            <div class="hero-text">
+                <h2>Welcome to Olga's Sweet Secrets</h2>
+                <p>Discover the warmth and taste of traditional baking, inspired my Grandma Olga's hidden recipes.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+         <p>&copy;<span id="currentyear"></span> | Site Plan - Project05 | Priscilla Varrenti | Argentina</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
