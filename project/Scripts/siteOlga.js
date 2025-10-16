@@ -1,6 +1,3 @@
-// ===========================
-// Menu Toggle
-// ===========================
 const menuButton = document.getElementById("menu");
 const navMenu = document.getElementById("nav-menu");
 
@@ -9,15 +6,11 @@ menuButton.addEventListener("click", () => {
   menuButton.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
 });
 
-// ===========================
-// Footer Info
-// ===========================
+
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// ===========================
-// Site Content (Recetas, Blog, Contacto)
-// ===========================
+
 const plan = [
   {
     name: "Olga's Sweet Secrets",
@@ -64,21 +57,15 @@ const plan = [
   }
 ];
 
-// ===========================
-// DOM References
-// ===========================
+
 const container = document.getElementById("plan-container");
 const pageTitle = document.getElementById("page-title");
 const hero = document.getElementById("hero");
 const contactFormSection = document.getElementById("contact-form");
 
-// ===========================
-// Render Plan Cards
-// ===========================
+
 function renderPlan(dataArray) {
   container.innerHTML = "";
-  contactFormSection.style.display = "none"; // Hide form by default
-
   dataArray.forEach((item) => {
     const card = document.createElement("div");
     card.classList.add("plan-card");
@@ -93,18 +80,14 @@ function renderPlan(dataArray) {
   });
 }
 
-// ===========================
-// Navigation Filtering
-// ===========================
 document.querySelectorAll("#nav-menu a").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const filter = e.target.dataset.filter;
-    let filtered = [];
-
-    // Always hide hero and contact form by default
+    
     hero.style.display = "none";
     contactFormSection.style.display = "none";
+    container.innerHTML= "";
 
     switch (filter) {
       case "all":
@@ -118,37 +101,25 @@ document.querySelectorAll("#nav-menu a").forEach((link) => {
         break;
       case "advanced":
         pageTitle.textContent = "Advanced";
-        filtered = plan.filter(item => item.category === "advanced");
+        renderPlan(plan.filter(item => item.category === "advanced"));
         break;
       case "blog":
         pageTitle.textContent = "Blog";
-        filtered = plan.filter(item => item.category === "blog");
+        renderPlan(plan.filter(item => item.category === "blog"));
         break;
       case "contact":
         pageTitle.textContent = "Contact Us";
-        container.innerHTML = ""; // Clear cards
-        contactFormSection.style.display = "block"; // Show form
-        return; // Don't call renderPlan
+        contactFormSection.style.display = "block";
+        break;
       default:
         pageTitle.textContent = "Home";
-        filtered = plan.filter(item => item.category === "home");
+        renderPlan(plan.filter(item => item.category === "home"));
         hero.style.display = "block";
         break;
     }
-
-    renderPlan(filtered);
   });
 });
 
-// ===========================
-// Initial Load
-// ===========================
-renderPlan(plan.filter(item => item.category === "home"));
-hero.style.display = "block";
-
-// ===========================
-// Contact Form Submission
-// ===========================
 document.addEventListener("submit", (e) => {
   if (e.target.id === "contact-form-form") {
     e.preventDefault();
@@ -156,11 +127,6 @@ document.addEventListener("submit", (e) => {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill in all fields.");
-      return;
-    }
 
     const contactData = {
       name,
@@ -175,3 +141,7 @@ document.addEventListener("submit", (e) => {
   }
 });
 
+
+renderPlan(plan.filter(item => item.category === "home"));
+hero.style.display = "block";
+contactFormSection.style.display = "none";

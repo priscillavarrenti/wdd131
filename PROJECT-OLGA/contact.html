@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olga's Sweet Secrets </title>
-    <meta name="description" content="Join Olga's Sweet Secrets for exclusive recipes, baking tips, and stories of each recipe.">
+    <title>Contact Us </title>
+    <meta name="description" content="Contact Olga's Sweet Secrets team">
     <meta name="author" content="Priscilla M. Varrenti">
 
     <link rel="stylesheet" href="styles/olga.css">
     <link rel="stylesheet" href="styles/olga_large.css" media="screen and (min-width: 801px)">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Gravitas+One&display=swap" rel="stylesheet">
@@ -24,19 +25,24 @@
             <nav id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="recipes.html">Recipes</a>
-                <a href="blog.html" class="active">Blog</a>
-                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
             </nav>
        </div>
     </header>
 
     <main>
-        <h2 id="page-title">Blog</h2>
-        <section class="blog-posts">
-            <article class="post">
-                <h3>Why Olga never wrote anything down</h3>
-                <p>Recipiess were passed down by memory, not paper. In this post, I reflect on my grandma's baking secrets...</p>
-            </article>
+        <h2 id="page-title">Contact Us</h2>
+        <section id="contact-form">
+            <form id="contact-form-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit"> Subscribe </button>
+            </form>
         </section>
     </main>
 

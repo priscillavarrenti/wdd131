@@ -13,13 +13,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Gravitas+One&display=swap" rel="stylesheet">
 
-    <script src="scripts/data.js" defer></script>
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+
 </head>
 <body>
-    <header id="header"></header>
-    <main id="content"></main>
+    <header>
+       <div class="header-container">
+        <h1>Olga's Sweet Secrets </h1>
+         <button id="menu" aria-label="Toggle menu">☰</button>
+            <nav id="nav-menu">
+                <a href="index.html"class="active">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+       </div>
+    </header>
+
+    <main>
+        <h2 id="page-title">Home</h2>
+        <section id="hero" class="hero">
+            <picture>
+                <source srcset="images/CAKE.jpg" media="(max-width: 784px)">
+                <source srcset="images/chocoCake.jpg" media="(min-width: 785px)">
+                <img src="images/chocoCake.jpg" alt="Delicious chocolate cake">
+            </picture>
+
+            <div class="hero-text">
+                <h2>Welcome to Olga's Sweet Secrets</h2>
+                <p>Discover the warmth and taste of traditional baking, inspired by my Grandma Olga's hidden recipes.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
          <p>&copy;<span id="currentyear"></span> | Site Plan - Project05 | Priscilla Varrenti | Argentina</p>
