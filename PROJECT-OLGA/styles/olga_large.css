@@ -1,42 +1,92 @@
-@media screen and (min-width: 768px){
-    #menu {
-        display: none;
-    }
+:root {
+    --primary-color: #b43434;
+    --second-color: #E180A5;
+    --bg-color: #FFD6F7;
+    --light_bg_color:#f6a4ad;
+    --text-color: #73001F;
+    --spacing: 1rem;
+}
+@media screen and (min-width: 785px) {
 
-    nav#nav-menu a  {
+    #menu {display: none !important;}
+
+    #nav-menu{
         display: flex !important;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 1rem;
         background-color: transparent;
         padding: 0;
+        box-shadow: none;
     }
 
-    .header-container{
-
+    .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
+        
     }
 
-    nav#nav-menu {
-        display: flex;
-        gap: 1rem;
+    #nav-menu a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 5px;
+        transition: var(--primary-color);
     }
 
-    #plan-container {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 1200px;
-        margin: 2rem auto;
+    #nav-menu a:hover {
+        background-color: var(--primary-color);
+        color: white;
     }
 
-    .plan-card {
-        max-width: 800px;
-        margin: 1rem auto;
-    }
 
-    .plan-card img {
-        max-width: 40%;
-    }
+  .hero {
+    position: relative;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateY(-50%, -50%);
+    width: 40%;
+    margin-top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .plan-card {
+    background-color: var(--light_bg_color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .plan-card:hover{
+    transform: scale(1.02);
+  }
+
+  .plan-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
 }
